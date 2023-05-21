@@ -1,17 +1,15 @@
 import Card from "../shared/Card";
-import { FaTimes } from 'react-icons/fa'
+import { FaTimes } from "react-icons/fa";
 
-function FeedbackItem({ item }) {
+function FeedbackItem({ item, isDelete }) {
   return (
     <Card className="card">
       <div className="num-display">{item.rating}</div>
-      <button className="close">
+      <button className="close" onClick={isDelete}>
         <FaTimes color='blue'/>
       </button>
       <div className="text-display">{item.text}</div>
-    
-    </Card>
-    
+    </Card>   
   );
 }
 
